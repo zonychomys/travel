@@ -16,38 +16,38 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'HomeHeader'
 }
 </script>
 
 <style lang="stylus" scoped>
   @import '~@/assets/styles/variables.styl'
   .header
-    display: flex
-    height: .86rem
-    line-height: .86rem
-    background: $bgColor
-    color: #fff
+    display flex
+    height .86rem
+    line-height .86rem
+    background $bgColor
+    color #fff
     .header-left
-      width: .64rem
-      float: left
+      width .64rem
+      float left
       .icon-back
-        padding-left: .2rem
-        font-size: .4rem
+        padding-left .2rem
+        font-size .4rem
     .header-input
-      flex: 1
-      height: .64rem
-      line-height: .64rem
-      margin-top: .12rem
-      margin-left: .2rem
-      padding-left: .2rem
-      background: #fff
-      border-radius: .1rem
-      color: #ccc
+      flex 1
+      height .64rem
+      line-height .64rem
+      margin-top .12rem
+      margin-left .2rem
+      padding-left .2rem
+      background #fff
+      border-radius .1rem
+      color #ccc
     .header-right
-      width: 1.24rem
-      float: right
-      text-align: center
+      width 1.24rem
+      float right
+      text-align center
       .icon-arrow
-        font-size: .24rem
+        font-size .24rem
 </style>
