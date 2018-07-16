@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { getHomeFeeds } from '@/api'
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
@@ -25,11 +26,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      this.$http.get('/homeFeeds')
-        .then(this.getHomeInfoSucc)
-    },
-    getHomeInfoSucc (res) {
-      console.log(res)
+      getHomeFeeds().then(res => { console.log(res) })
     }
   },
   mounted () {

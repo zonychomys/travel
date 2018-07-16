@@ -12,7 +12,6 @@ import '@/assets/styles/border.styl'
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
-Vue.prototype.$http = axios
 Vue.use(VueAwesomeSwiper)
 fastClick.attach(document.body)
 
