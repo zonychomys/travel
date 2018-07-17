@@ -17,7 +17,7 @@ export default {
       let newIcon = {
         id: Mock.Random.natural(),
         imgUrl: Mock.Random.image('165x165'),
-        desc: Mock.Random.cparagraph(1, 3)
+        desc: Mock.Random.ctitle(2, 4)
       }
       iconList.push(newIcon)
     }
