@@ -20,10 +20,12 @@ export default {
       let natural = Mock.Random.natural(5, 10)
       let letterCities = []
       for (let j = 0; j < natural; j++) {
+        let cityName = Mock.Random.city()
+        let cityNameSpell = pinyin(cityName, { style: pinyin.STYLE_NORMAL }).join('')
         let newCity = {
           id: Mock.Random.natural(),
-          spell: Mock.Random.word(5, 10),
-          name: Mock.Random.city()
+          spell: cityNameSpell,
+          name: cityName
         }
         letterCities.push(newCity)
       }
