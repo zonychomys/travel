@@ -1,7 +1,7 @@
 import Mock from 'mockjs'
 
 export default {
-  homeFeeds: function () {
+  homeFeeds: function (options) {
     let swiperList = []
     let iconList = []
     let recommendList = []

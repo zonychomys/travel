@@ -10,6 +10,7 @@
 
 <script>
 import { getHomeFeeds } from '@/api'
+import { mapState } from 'vuex'
 import HomeHeader from './components/Header'
 import HomeSwiper from './components/Swiper'
 import HomeIcons from './components/Icons'
@@ -26,15 +27,20 @@ export default {
   },
   data () {
     return {
+      lastCity: '',
       swiperList: [],
       iconList: [],
       recommendList: [],
       weekendList: []
     }
   },
+  computed: {
+    ...mapState(['city'])
+  },
   methods: {
     getHomeInfo () {
-      getHomeFeeds().then(res => {
+      let params = { city: this.city }
+      getHomeFeeds(params).then(res => {
         res = res.data
         if (res.ret) {
           this.swiperList = res.data.swiperList
@@ -46,7 +52,14 @@ export default {
     }
   },
   mounted () {
+    this.lastCity = this.city
     this.getHomeInfo()
+  },
+  activated () {
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city
+      this.getHomeInfo()
+    }
   }
 }
 </script>
