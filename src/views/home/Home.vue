@@ -37,7 +37,6 @@ export default {
       getHomeFeeds().then(res => {
         res = res.data
         if (res.ret) {
-          this.city = res.data.city
           this.swiperList = res.data.swiperList
           this.iconList = res.data.iconList
           this.recommendList = res.data.recommendList
